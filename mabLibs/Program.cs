@@ -7,15 +7,11 @@ namespace mabLibs
         static void Main(string[] args)
         {
             // Create an instance of the MadLibs class
-            MadLibs madLibs = new MadLibs();
+            MadLibs madLib = new MadLibs();
 
-            // Call the method to display a random Mad Lib
-            madLibs.DisplayRandomMadLib();
-
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
-
-            Console.Clear();
+            UserInput input = new UserInput(madLib.Parameters);
+            var values = input.GetUserValues();
+            madLib.Display(values);
         }
     }
 }
