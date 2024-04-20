@@ -9,6 +9,8 @@ namespace mabLibs
         static MadLibs()
         {
             //statically populate the list of all madlibs 
+            //the keys are the template strings, the values are the parameter dictionaries.
+            //note that the format for template strings is totally up to you, but user input can cause unexpeted behavior
             _allMadLibs = new Dictionary<string, Dictionary<string, string>>();
             _allMadLibs.Add(@"
             This weekend I am going camping with !!ProperNounPersonName!!. I packed my lantern, sleeping bag, and !!Noun!!. 
